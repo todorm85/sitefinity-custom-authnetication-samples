@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="AutehnticationSamples.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Telerik.Sitefinity.Samples.Global" Language="C#" %>

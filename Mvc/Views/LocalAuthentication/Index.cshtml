@@ -1,0 +1,22 @@
+﻿@model Telerik.Sitefinity.Samples.Mvc.Models.LocalAuthenticationViewModel
+
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+@if (ViewBag.error != null)
+{
+    <span>@ViewBag.error</span>
+}
+
+@using (Html.BeginFormSitefinity("index", null, FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Username)
+    @Html.TextBoxFor(x => x.Username)
+    
+    @Html.LabelFor(x => x.RememberMe)
+    @Html.CheckBoxFor(x => x.RememberMe)
+
+    <div><input type="submit" value='Go' /></div>
+
+    @Html.AddSitefinityAntiforgeryToken()
+}
